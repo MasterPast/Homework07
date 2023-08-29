@@ -1,6 +1,13 @@
-data = ['X', 3, 'Z', 2, 'X', 2, 'Y', 3, 'Z', 2]
-     #   0   1   2   3   4
+data = ['X', 'X', 'X', 'Z', 'Z', 'X', 'X', 'Y', 'Y', 'Y', 'Z', 'Z']
+     #   0    1    2    3    4
+txt = ''
+def encode(data):
+    global txt
+    ind = 0
+    count = 1
+    balance = None
 
+<<<<<<< HEAD
 def decode(encoded_list):
     # print(type(encoded_list[0]))
     # print(type(encoded_list[1]))
@@ -8,23 +15,40 @@ def decode(encoded_list):
     # print(isinstance(encoded_list[1], int))
 
     if not encoded_list:
+=======
+    if not data:
+>>>>>>> 29d8e3d25399af13e74533bb58abbbc3f1d0c7fa
         return []
 
-    head = encoded_list[0]
-    print(f'head>>> {head}')
-    if isinstance(head, int):
-        print(head)
-        print(type(head))
-        if len(encoded_list) >= 2:
-            value = encoded_list[1]
-            rest_of_list = encoded_list[2:]
-            decoded_part = [value] * head
-            print(decoded_part)
-            return decoded_part + decode(rest_of_list)
+    if len(data) <= 2:
+        print('PPZD', len(data))
+        if data[ind] == data[ind+1]:
+            enc = [data[ind], count+1]
+            return enc
         else:
-            return []
-    else:
-        rest_of_list = encoded_list[1:]
-        return [head] + decode(rest_of_list)
-re = decode(data)
-print(re)
+            enc = [data[ind], 1, data [ind+1], 1]
+            return enc
+
+    while len(data) > 2:
+        print(ind)
+        print('dfdsf', len(data))
+        print(txt)
+        if data[ind] == data[ind+1]:
+            enc = [data[ind], count+1]
+            txt += data[ind]+str(count+1)
+        else:
+            print(777)
+            balance = data[ind+1:]
+            print(f'else len>>{len(data)} ind>>{ind} count>>{count} enc>>{enc} bal>>{balance}')
+            txt+=data[ind]+str(count)
+            enc = [data[ind], count]
+            enc.extend(encode(balance))
+            print(2345345345) 
+            print(enc)
+            return enc   
+        ind += 1
+        count += 1
+        print(f'!!!len>>{len(data)} ind>>{ind} count>>{count} enc>>{enc} bal>>{balance}')
+
+    
+print(encode(data))
