@@ -1,0 +1,13 @@
+setup.py
+Clean_folder_by_MasterPast.egg-info/PKG-INFO
+Clean_folder_by_MasterPast.egg-info/SOURCES.txt
+Clean_folder_by_MasterPast.egg-info/dependency_links.txt
+Clean_folder_by_MasterPast.egg-info/entry_points.txt
+Clean_folder_by_MasterPast.egg-info/top_level.txt
+clean_folder/__init__.py
+clean_folder/clean.py
+clean_folder/HW07_Temp/clean.py
+clean_folder/HW07_Temp/console.py
+clean_folder/HW07_Temp/sorting.py
+clean_folder/HW07_Temp/temp.py
+clean_folder/HW07_Temp/temp2.py
