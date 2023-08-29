@@ -7,7 +7,6 @@ def decode(encoded_list):
     # print(isinstance(encoded_list[0], int))
     # print(isinstance(encoded_list[1], int))
 
-    
     if not encoded_list:
         return []
 
