@@ -7,17 +7,13 @@ def encode(data):
     count = 1
     balance = None
 
-<<<<<<< HEAD
 def decode(encoded_list):
     # print(type(encoded_list[0]))
     # print(type(encoded_list[1]))
     # print(isinstance(encoded_list[0], int))
     # print(isinstance(encoded_list[1], int))
 
-    if not encoded_list:
-=======
     if not data:
->>>>>>> 29d8e3d25399af13e74533bb58abbbc3f1d0c7fa
         return []
 
     if len(data) <= 2:
