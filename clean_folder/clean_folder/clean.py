@@ -257,8 +257,10 @@ def write_file(sort_path, list_dic):    # Функція зберігає зві
         fa.write('{:{fill}{align}{width}}'.format(wroot2, fill = ' ', align = '<', width = 186) + '|\n')
         fa.write(('-' * 187) + '\n')
 
-PATH = sys.argv[1]  # Считування місцезнаходження папки з командної строки. Прописано вище в константах.
-sort_path, root_path = make_dirs(PATH)
-sorting(PATH, sort_path, list_dic, list_res)
-write_file(sort_path + '/ZVIT.TXT', list_dic)
-last_chanсe(PATH, root_path)
+def main():
+
+    PATH = sys.argv[1]  # Считування місцезнаходження папки з командної строки. Прописано вище в константах.
+    sort_path, root_path = make_dirs(PATH)
+    sorting(PATH, sort_path, list_dic, list_res)
+    write_file(sort_path + '/ZVIT.TXT', list_dic)
+    last_chanсe(PATH, root_path)
